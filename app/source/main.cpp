@@ -38,7 +38,7 @@ namespace Services {
             return ret;
         }
         
-        font = intraFontLoad("flash0:/font/ltn8.pgf", INTRAFONT_CACHE_ALL);
+        font = intraFontLoad("flash0:/font/gb3s1518.bwfon", INTRAFONT_CACHE_ALL);
         G2D::FontSetStyle(1.f, WHITE, INTRAFONT_ALIGN_LEFT);
         
         // Font size cache
