@@ -5,6 +5,7 @@
 #include "audio.h"
 #include "colours.h"
 #include "config.h"
+#include "encoding.h"
 #include "fs.h"
 #include "g2d.h"
 #include "gui.h"
@@ -46,8 +47,7 @@ namespace AudioPlayer {
         G2D::FontSetStyle(1.f, WHITE, INTRAFONT_ALIGN_LEFT);
         length_time_width = intraFontMeasureText(font, length_time);
         
-        filename = FS::GetFilename(item.entries[item.selected].d_name);
-        std::transform(filename.begin(), filename.end(), filename.begin(), ::toupper);
+        filename = Encoding::ConvertFileName(FS::GetFilename(item.entries[item.selected].d_name));
     }
 
     static void StopPlayback(void) {

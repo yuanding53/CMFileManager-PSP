@@ -6,6 +6,7 @@
 
 #include "colours.h"
 #include "config.h"
+#include "encoding.h"
 #include "fs.h"
 #include "g2d.h"
 #include "gui.h"
@@ -361,7 +362,7 @@ namespace TextViewer {
 
         std::string new_line = std::string();
         TEXT_VIEWER_STATE state = STATE_EDIT;
-        std::string filename = FS::GetFilename(path);
+        std::string filename = Encoding::ConvertFileName(FS::GetFilename(path));
         
         static int selection = 0;
         static const std::string prompt = "Do you wish to save your changes?";

@@ -5,6 +5,7 @@
 #include "audioplayer.h"
 #include "colours.h"
 #include "config.h"
+#include "encoding.h"
 #include "fs.h"
 #include "g2d.h"
 #include "game_launcher.h"
@@ -38,7 +39,7 @@ namespace GUI {
         }
 
         for (u32 i = start; i < item.entries.size(); i++) {
-            std::string filename = item.entries[i].d_name;
+            std::string filename = Encoding::ConvertFileName(item.entries[i].d_name);
 
             if (i == static_cast<u32>(item.selected))
                 G2D::DrawRect(0, start_y + (sel_dist * (i - start)), 480, sel_dist, SELECTOR_COLOUR);
