@@ -38,15 +38,15 @@ namespace Encoding {
     }
     
     std::string ConvertFileName(const std::string& filename) {
-        // Since we're using GBK encoding font, return the filename as-is
-        // The font will handle the GBK encoded characters
+        // Since we're using UTF-8 encoding font, return the filename as-is
+        // The font will handle the UTF-8 encoded characters
         return filename;
     }
     
     std::string UTF8ToGBK(const std::string& utf8_str) {
-        // For PSP, since we're using GBK encoding font, we assume the input
+        // For PSP with UTF-8 encoding font, we assume the input
         // is already in the correct encoding for display
-        // This function is mainly for API compatibility
+        // This function is kept for API compatibility
         return utf8_str;
     }
 }
