@@ -38,10 +38,11 @@ namespace Services {
             return ret;
         }
         
-        font = intraFontLoad("flash0:/font/gb3s1518.bwfon", INTRAFONT_CACHE_ALL);
+        // font = intraFontLoad("flash0:/font/gb3s1518.bwfon", INTRAFONT_CACHE_ALL);
+        font = intraFontLoad("flash0:/font/ltn0.pgf", INTRAFONT_CACHE_ALL);
         intraFontSetEncoding(font, INTRAFONT_STRING_GBK);
         G2D::FontSetStyle(1.f, WHITE, INTRAFONT_ALIGN_LEFT);
-        
+
         // Font size cache
         for (int i = 0; i < 256; i++) {
             char character[2] = {0};
