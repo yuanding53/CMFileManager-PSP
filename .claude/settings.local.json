@@ -3,7 +3,8 @@
     "allow": [
       "Bash(find:*)",
       "Bash(make:*)",
-      "Bash(g++:*)"
+      "Bash(g++:*)",
+      "Bash(git log:*)"
     ],
     "deny": [],
     "ask": []
