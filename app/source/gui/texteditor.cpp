@@ -161,7 +161,7 @@ namespace TextViewer {
             else {
                 ch_width = font_size_cache[(int)ch];
                 if (ch_width == 0) {
-                    ch = ' '; // Change invalid characters to space
+                    ch = '?'; // Change invalid characters to space
                     ch_width = font_size_cache[(int)ch];
                 }
             }
